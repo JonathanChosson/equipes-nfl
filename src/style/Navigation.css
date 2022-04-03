@@ -1,0 +1,20 @@
+.navigation__ul{
+    list-style-type: none;
+    display: flex;
+    margin: 10px;
+    padding: 0px;
+    color: white;
+}
+
+.navigation__ul ,a {
+    text-decoration: none;
+    color: white;
+}
+
+.active {
+    color: red;
+}
+
+.navigation__ul__li{
+    margin-left: 10px;
+}

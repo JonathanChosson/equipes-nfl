@@ -1,0 +1,106 @@
+.section, .section--info{
+    width: 250px;
+    height: 250px;
+    background-color: white;
+    margin-top: 10px;
+    border-radius: 8px;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.section__img{
+    width: 100%;
+    object-fit: cover;
+    z-index: 0;
+}
+
+.section__p{
+    width: 100%;
+    height: 100%;
+    margin: 0px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: none;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    font-size: 1.5rem;
+    color: white;
+    z-index:1;
+}
+
+.section:hover .section__p{
+    display: flex;
+    background-color: #0133698e;
+    ;
+}
+
+.section:hover .section__img{
+    filter: blur(4px);
+}
+
+.invisible{
+    display:none
+}
+
+@-webkit-keyframes flip-out-ver-right {
+    0% {
+      -webkit-transform: rotateY(0);
+              transform: rotateY(0);
+      opacity: 1;
+    }
+    100% {
+      -webkit-transform: rotateY(70deg);
+              transform: rotateY(70deg);
+      opacity: 0;
+    }
+  }
+  @keyframes flip-out-ver-right {
+    0% {
+      -webkit-transform: rotateY(0);
+              transform: rotateY(0);
+      opacity: 1;
+    }
+    100% {
+      -webkit-transform: rotateY(70deg);
+              transform: rotateY(70deg);
+      opacity: 0;
+    }
+  }
+  
+  .flip-out-ver-right {
+	-webkit-animation: flip-out-ver-right 0.45s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+	        animation: flip-out-ver-right 0.45s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+}
+@-webkit-keyframes flip-in-ver-right {
+    0% {
+      -webkit-transform: rotateY(-80deg);
+              transform: rotateY(-80deg);
+      opacity: 0;
+    }
+    100% {
+      -webkit-transform: rotateY(0);
+              transform: rotateY(0);
+      opacity: 1;
+    }
+  }
+  @keyframes flip-in-ver-right {
+    0% {
+      -webkit-transform: rotateY(-80deg);
+              transform: rotateY(-80deg);
+      opacity: 0;
+    }
+    100% {
+      -webkit-transform: rotateY(0);
+              transform: rotateY(0);
+      opacity: 1;
+    }
+  }
+  
+  .flip-in-ver-right {
+	-webkit-animation: flip-in-ver-right 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+	        animation: flip-in-ver-right 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
