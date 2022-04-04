@@ -123,3 +123,10 @@
 	-webkit-animation: flip-in-ver-right 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
 	        animation: flip-in-ver-right 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
 }
+
+@media screen and (max-width: 425px) {
+  .section, .section--info{
+    width: 150px;
+    height: 150px;
+}
+}
