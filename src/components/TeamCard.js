@@ -40,13 +40,14 @@ const TeamCard = ({teamUrl}) => {
     }
 
     function handleClickDos(e){
-        e.target.parentNode.classList.remove('flip-in-ver-right');
-        e.target.parentNode.classList.add('flip-out-ver-right');
+        let actual  = Array.from(e.target.parentNode.classList).includes('section--info') ? e.target.parentNode : e.target.parentNode.parentNode;
+        actual.classList.remove('flip-in-ver-right');
+        actual.classList.add('flip-out-ver-right');
         setTimeout(function(){
-            e.target.parentNode.classList.remove('flip-out-ver-right');
-            e.target.parentNode.classList.add('invisible');
-            e.target.parentNode.previousSibling.classList.remove('invisible');
-            e.target.parentNode.previousSibling.classList.add('flip-in-ver-right');
+            actual.classList.remove('flip-out-ver-right');
+            actual.classList.add('invisible');
+            actual.previousSibling.classList.remove('invisible');
+            actual.previousSibling.classList.add('flip-in-ver-right');
         },450)
     }
 
@@ -57,9 +58,9 @@ const TeamCard = ({teamUrl}) => {
                 <img className='section__img' src={teamInfo.teamLogo} alt={"Logo de " + teamInfo.TeamName} />
                 <p className='section__p'>{teamInfo.teamName}</p>
             </section>
-            <section className='section--info invisible' onClick={handleClickDos}>
+            <section className='section--info invisible' >
                 {teamInfo.teamStadeImage !== "" ? <img className='section__img' src={teamInfo.teamStadeImage} alt={"Stade de " + teamInfo.teamName} /> : ""}
-                <div className='section--info__div'>
+                <div className='section--info__div' onClick={handleClickDos}>
                     <p className='section--info__p bold'>{teamInfo.teamCompleteName}</p>
                     <p className='section--info__p'>{teamInfo.teamAbbreviation}</p>
                     <p className='section--info__p'>Stade : {teamInfo.teamStadeName}</p>
