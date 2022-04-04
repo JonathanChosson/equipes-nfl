@@ -1,0 +1,27 @@
+.div{
+    background-color: white;
+    margin: 25px;
+    border-radius: 8px;
+    border: 1px solid black;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.div__p{
+    font-size: 1.5rem;
+}
+
+.div__p--link{
+    font-size: 3rem;
+    margin: 10px;
+}
+
+.div__p--link:hover .div__p--link__a{
+    color: #013369;
+}
+
+a{
+    color: black
+}

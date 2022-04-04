@@ -9,8 +9,10 @@ const TeamCard = ({teamUrl}) => {
         async function axiosGet(){
             // console.log(teamUrl);
                 let response = await axios.get(teamUrl);
-                let teamStadeImage = response.data.venue.images[0].href ? response.data.venue.images[0].href : ""
-                console.log(teamStadeImage);
+                let setTeamStadeImage = ""
+                if(response.data.venue.images.length !== 0){
+                    setTeamStadeImage = response.data.venue.images[0].href
+                }
                 let team = {
                     teamName: response.data.shortDisplayName,
                     teamLogo: response.data.logos[0].href,
@@ -18,7 +20,7 @@ const TeamCard = ({teamUrl}) => {
                     teamCompleteName: response.data.displayName,
                     teamCity: response.data.venue.address.city,
                     teamStadeName: response.data.venue.fullName,
-                    // teamStadeImage: 
+                    teamStadeImage: setTeamStadeImage
                 }
                 setTeamInfo(team)
         }
@@ -27,9 +29,10 @@ const TeamCard = ({teamUrl}) => {
     },[teamUrl])
 
     function handleClickFace(e){
-        console.log(e.target.parentNode.nextSibling);
+        e.target.parentNode.classList.remove('flip-in-ver-right');
         e.target.parentNode.classList.add('flip-out-ver-right');
         setTimeout(function(){
+            e.target.parentNode.classList.remove('flip-out-ver-right');
             e.target.parentNode.classList.add('invisible');
             e.target.parentNode.nextSibling.classList.remove('invisible');
             e.target.parentNode.nextSibling.classList.add('flip-in-ver-right');
@@ -37,7 +40,14 @@ const TeamCard = ({teamUrl}) => {
     }
 
     function handleClickDos(e){
-
+        e.target.parentNode.classList.remove('flip-in-ver-right');
+        e.target.parentNode.classList.add('flip-out-ver-right');
+        setTimeout(function(){
+            e.target.parentNode.classList.remove('flip-out-ver-right');
+            e.target.parentNode.classList.add('invisible');
+            e.target.parentNode.previousSibling.classList.remove('invisible');
+            e.target.parentNode.previousSibling.classList.add('flip-in-ver-right');
+        },450)
     }
 
 
@@ -48,7 +58,14 @@ const TeamCard = ({teamUrl}) => {
                 <p className='section__p'>{teamInfo.teamName}</p>
             </section>
             <section className='section--info invisible' onClick={handleClickDos}>
-                <p>test</p>
+                {teamInfo.teamStadeImage !== "" ? <img className='section__img' src={teamInfo.teamStadeImage} alt={"Stade de " + teamInfo.teamName} /> : ""}
+                <div className='section--info__div'>
+                    <p className='section--info__p bold'>{teamInfo.teamCompleteName}</p>
+                    <p className='section--info__p'>{teamInfo.teamAbbreviation}</p>
+                    <p className='section--info__p'>Stade : {teamInfo.teamStadeName}</p>
+                    <p className='section--info__p'>Ville : {teamInfo.teamCity}</p>
+                </div>
+                
             </section>
         </div>
         
