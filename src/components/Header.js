@@ -5,7 +5,9 @@ const Header = () => {
     return (
         <header className='header'>
             <h1 className='header__h1'>
-            🏈 Liste et information des équipes de NFL 🏈
+                <span>
+                    🏈 Liste des équipes de NFL 🏈
+                </span>
             </h1>
         </header>
     );

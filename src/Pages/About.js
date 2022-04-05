@@ -10,7 +10,7 @@ const about = () => {
             <Navigation />
             <div className='div'>
                 <p className='div__p'>
-                Ce site a été créée en Avril 2022 par Chosson Jonathan avec l’envie de rendre plus accessible la liste des équipes de NFL. 
+                Ce site a été créée en Avril 2022 par Chosson Jonathan avec l’envie de rendre plus accessible la liste des équipes de NFL.
                 </p>
                 <p className='div__p'>
                 Source : <a href="https://www.espn.com/apis/devcenter/io-docs.html" >ESPN API</a>

@@ -66,7 +66,6 @@ const TeamCard = ({teamUrl}) => {
                     <p className='section--info__p'>Stade : {teamInfo.teamStadeName}</p>
                     <p className='section--info__p'>Ville : {teamInfo.teamCity}</p>
                 </div>
-                
             </section>
         </div>
         
