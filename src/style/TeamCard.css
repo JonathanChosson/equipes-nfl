@@ -2,7 +2,7 @@
     width: 250px;
     height: 250px;
     background-color: white;
-    margin-top: 10px;
+    margin: 5px;
     border-radius: 8px;
     border: 1px solid black;
     position: relative;
@@ -37,24 +37,6 @@
 .section--info__p{
     font-weight: 400;
     font-size: 1rem;
-}
-
-.section:hover .section__p{
-    display: flex;
-    background-color: #0133698e;
-}
-
-.section--info:hover .section--info__div{
-    display: flex;
-    background-color: #0133698e;
-}
-
-.section:hover .section__img{
-    filter: blur(4px);
-}
-
-.section--info:hover .section__img{
-    filter: blur(4px);
 }
 
 .invisible{
@@ -129,4 +111,47 @@
     width: 150px;
     height: 150px;
 }
+}
+
+@media screen and (max-width: 320px) {
+  .section, .section--info{
+    width: 250px;
+    height: 250px;
+}
+}
+
+@media screen and (min-width: 1000px) {
+  .section:hover .section__p{
+    display: flex;
+    background-color: #0133698e;
+}
+
+.section--info:hover .section--info__div{
+    display: flex;
+    background-color: #0133698e;
+}
+
+.section:hover .section__img{
+    filter: blur(4px);
+}
+
+.section--info:hover .section__img{
+    filter: blur(4px);
+}
+}
+
+@media screen and (max-width: 1000px) {
+  .section .section__p{
+    display: flex;
+    background-color: #0133698e;
+    height: 25px;
+}
+
+.section--info .section--info__div{
+    display: flex;
+    background-color: #0133698e;
+    height: auto;
+}
+
+
 }
