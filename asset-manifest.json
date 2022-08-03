@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/static/css/main.cd362efc.css",
-    "main.js": "/static/js/main.f08be0aa.js",
-    "static/js/787.17a66d19.chunk.js": "/static/js/787.17a66d19.chunk.js",
-    "index.html": "/index.html",
-    "main.cd362efc.css.map": "/static/css/main.cd362efc.css.map",
-    "main.f08be0aa.js.map": "/static/js/main.f08be0aa.js.map",
-    "787.17a66d19.chunk.js.map": "/static/js/787.17a66d19.chunk.js.map"
+    "main.css": "/equipes-nfl/static/css/main.c28862a4.css",
+    "main.js": "/equipes-nfl/static/js/main.9b056158.js",
+    "static/js/787.17a66d19.chunk.js": "/equipes-nfl/static/js/787.17a66d19.chunk.js",
+    "index.html": "/equipes-nfl/index.html",
+    "main.c28862a4.css.map": "/equipes-nfl/static/css/main.c28862a4.css.map",
+    "main.9b056158.js.map": "/equipes-nfl/static/js/main.9b056158.js.map",
+    "787.17a66d19.chunk.js.map": "/equipes-nfl/static/js/787.17a66d19.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.cd362efc.css",
-    "static/js/main.f08be0aa.js"
+    "static/css/main.c28862a4.css",
+    "static/js/main.9b056158.js"
   ]
 }
