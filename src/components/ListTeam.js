@@ -17,7 +17,8 @@ const ListTeam = () => {
             <article className='main__article'>
                 {
                     teams.map((team, index) =>
-                    <TeamCard key={index} teamUrl={team.$ref} />
+                    // console.log("https"+ team.$ref.slice(4))
+                    <TeamCard key={index} teamUrl={"https"+ team.$ref.slice(4)} />
                     )
                 }
             </article>
